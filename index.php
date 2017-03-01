@@ -5,7 +5,7 @@
  * Date: 22.02.17
  * Time: 21:46
  */
-
+session_start();
 require_once 'lib/db_connect.php';
 
 ?>
@@ -15,6 +15,10 @@ require_once 'lib/db_connect.php';
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 </head>
 <body>
+<?php if(!empty($_SESSION['message'])){
+     echo $_SESSION['message'];
+}
+?>
 <table class='table'>
     <thead>
         <th>ID</th>

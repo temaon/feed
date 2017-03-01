@@ -18,7 +18,7 @@
         <form method="post" class="form-horizontal col-md-6 col-md-offset-3">
             <h2>Тестовая форма</h2>
             <div class="form-group">
-                <label for="input1" class="col-sm-2 control-label">Имя...</label>
+                <label for="input1" class="col-sm-2 control-label">Имя</label>
                 <div class="col-sm-10">
                     <input type="text" name="fname" class="form-control" id="input1" placeholder="Ваше имя..."/>
                 </div>
