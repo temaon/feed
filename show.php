@@ -7,10 +7,13 @@
 <body>
 <?php
 $query = mysqli_query($connect,"SELECT * FROM posts WHERE id={$_GET['id']}");
-$post = mysqli_fetch_object($query);
+if($post = mysqli_fetch_object($query)){
     echo '<h1>', $post->title,'</h1>';
     echo '<p>', $post->description,'</p>';
     echo '<a href="/">Cсылка назад</a>';
+}else{
+    echo '<h1>Пост отсутствует!</h1>';
+}
 ?>
 </body>
 </html>
