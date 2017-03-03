@@ -12,7 +12,7 @@ require_once 'lib/db_connect.php';
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap.min.css"/>
 </head>
 <body>
 <?php if(!empty($_SESSION['message'])){
@@ -25,6 +25,8 @@ require_once 'lib/db_connect.php';
         <th>Заголовок</th>
         <th>Описание</th>
         <th>Ссылка</th>
+        <th>Удалить</th>
+        <th>Редактировать</th>
     </thead>
     <tbody>
     <?php
@@ -35,11 +37,14 @@ require_once 'lib/db_connect.php';
             echo '<td>',$post->title,'</td>';
             echo '<td>',$post->description,'</td>';
             echo '<td>',"<a href='/show.php?id=$post->id'>Читать...</a>",'</td>';
+            echo '<td>',"<a href='/delete.php?id=$post->id'>Удалить</a>",'</td>';
+            echo '<td>',"<a href='/edit_post.php?id=$post->id'>Редактирвать</a>",'</td>';
             echo '</tr>';
         }
     ?>
     </tbody>
 </table>
+<a class="btn btn-primary" href="/new_post.php">Новый пост</a>
 </body>
 </html>
 

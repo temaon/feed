@@ -1,3 +1,4 @@
+<?php require_once 'forms/post_form.php'; ?>
 <html>
 <head>
     <title>Тестовая форма</title>
@@ -13,23 +14,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <form method="post" action="/create_post.php" class="form-horizontal col-md-6 col-md-offset-3">
-            <h2>Добавить новый пост</h2>
-            <div class="form-group">
-                <label for="input1" class="col-sm-2 control-label">Заголовок</label>
-                <div class="col-sm-10">
-                    <input type="text" name="title" class="form-control" id="input1" placeholder="Название поста..."/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="description" class="col-sm-2 control-label">Описание</label>
-                <div class="col-sm-10">
-                    <textarea name="description" class="form-control" id="description"
-                              placeholder="Содержание..."></textarea>
-                </div>
-            </div>
-            <input type="submit" class="btn btn-primary col-md-2 col-md-offset-10" value="Save"/>
-        </form>
+        <?php echo get_post_form('create_post.php', 'new'); ?>
     </div>
 </div>
 </body>
