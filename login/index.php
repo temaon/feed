@@ -1,4 +1,8 @@
-<?php require_once '../lib/flash_messages.php'; ?>
+<?php
+require_once '../lib/auth_check.php';
+redirect_if_user_auth();
+require_once '../lib/flash_messages.php';
+?>
 <html>
 <head>
     <title>Форма входа</title>

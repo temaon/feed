@@ -6,6 +6,7 @@
  * Time: 19:29
  */
 
+require_once 'lib/auth_check.php';
 require_once 'lib/flash_messages.php';
 require_once 'lib/db_queries.php';
 

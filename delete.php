@@ -1,8 +1,9 @@
 <?php
+require_once 'lib/auth_check.php';
+check_user_auth();
+
 require_once 'lib/db_queries.php';
 
-
-session_start();
 /**
  * Created by IntelliJ IDEA.
  * User: tema_on

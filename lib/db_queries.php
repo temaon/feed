@@ -71,5 +71,5 @@ function update_record($table_name, $params, $field_name = ''){
         }
         $query_string .= "WHERE $field_name = $field_value";
     }
-//    return mysqli_query($connect, $query_string);
+    return mysqli_query($connect, $query_string);
 }

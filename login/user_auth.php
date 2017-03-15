@@ -11,7 +11,7 @@ require_once '../lib/config.php';
 
 if(empty($_POST['login']) || empty($_POST['password'])){
     set_flash_message('message', 'Вы должны заполнить все поля!');
-    return header('Location:/login');
+    return header('Location:/login/');
 }
 $user_info = get_user_info();
 $login = $_POST['login'];
@@ -24,6 +24,6 @@ if($user_info['password'] == md5($password) &&
     return header("Location:/");
 }else{
     set_flash_message('message', 'Ошибка логина или пароля!');
-    return header("Location:/login");
+    return header("Location:/login/");
 }
 

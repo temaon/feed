@@ -6,6 +6,7 @@
  * Time: 21:46
  */
 
+require_once 'lib/auth_check.php';
 require_once 'lib/flash_messages.php';
 require_once 'lib/db_queries.php';
 //echo '<pre>';
@@ -47,6 +48,11 @@ require_once 'lib/db_queries.php';
     ?>
     </tbody>
 </table>
+<?php if(user_exists()): ?>
+    <a class="btn btn-danger" href="/login/user_auth_delete.php">Выход</a>
+<?php else: ?>
+    <a class="btn btn-info" href="/login/">Вход</a>
+<?php endif; ?>
 <a class="btn btn-primary" href="/new_post.php">Новый пост</a>
 </body>
 </html>

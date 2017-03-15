@@ -1,4 +1,8 @@
-<?php require_once 'forms/post_form.php'; ?>
+<?php
+require_once 'lib/auth_check.php';
+check_user_auth();
+require_once 'forms/post_form.php';
+?>
 <html>
 <head>
     <title>Тестовая форма</title>
