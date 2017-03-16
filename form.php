@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <form method="post" class="form-horizontal col-md-6 col-md-offset-3">
+        <form method="post" enctype="multipart/form-data" class="form-horizontal col-md-6 col-md-offset-3">
             <h2>Тестовая форма</h2>
             <div class="form-group">
                 <label for="input1" class="col-sm-2 control-label">Имя</label>
