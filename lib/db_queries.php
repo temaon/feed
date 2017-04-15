@@ -47,7 +47,8 @@ function create_record($table_name, $params){
 //
     }, $params), ', ') . ')';
     $query_string .= $field_names.$field_values;
-    return mysqli_query($connect, $query_string);
+    mysqli_query($connect, $query_string);
+    return mysqli_insert_id($connect);
 }
 
 function update_record($table_name, $params, $field_name = ''){

@@ -6,15 +6,17 @@
  * Time: 18:29
  */
 function uploader($post_type, $id){
-    $target_dir = "upload/$post_type/$id";
-    if(!is_dir($target_dir)){
-        if (!mkdir($target_dir, 0755, true)) {
+    $target_dir = realpath(__DIR__.'/../upload/');
+    $full_path = $target_dir.'/'.$post_type.'/'.$id;
+//    var_dump($target_dir, $full_path);
+//    die;
+    if(!is_dir($full_path)){
+        if (!mkdir($full_path, 777, true)) {
             die('Не удалось создать директории...');
         }
     }
-
     $base_name = basename($_FILES["fileToUpload"]["name"]);
-    $target_file = $target_dir . $base_name;
+    $target_file = $full_path . $base_name;
     if (!empty($_FILES["file"])) {
         if ($_FILES["file"]["error"] > 0) {
             echo "Error: " . $_FILES["file"]["error"] . "<br>";
